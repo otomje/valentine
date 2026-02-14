@@ -4,10 +4,6 @@ body {
     background-color: var(--st-background);
 }
 
-.close-content {
-    display: none !important;
-}
-
 .wrapper {
     inset: 0;
     z-index: -1;
