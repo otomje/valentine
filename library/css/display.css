@@ -1,0 +1,5 @@
+@media (max-width: 630px) {
+    .message__content-section {
+        flex-direction: column;
+    }
+}

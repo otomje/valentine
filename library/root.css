@@ -1,0 +1,75 @@
+:root {
+    --none: transparent;
+    --st-background: rgb(255 215 215);
+    --gradient-background: radial-gradient(circle, rgba(255 218 218), rgba(255 215 215));
+    --content-section: rgb(255 250 250 / .4);
+    --content-section-border: rgb(255 250 250);
+    --content-section-wellcome-h1-color: rgb(60 60 60);
+    --content-section-button: rgb(50 50 50);
+    --content-section-button-border: rgb(50 50 50);
+    --content-section-button-next-color: rgb(255 255 255);
+    --content-section-button-back-color: rgb(50 50 50);
+    --content-section-message-h2-color: rgb(50 50 50);
+    --content-section-message-p-color: rgb(50 50 50);
+    --content-section-finale-h1-color: rgb(60 60 60);
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('font/OpenSans-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('font/OpenSans-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('font/OpenSans-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@keyframes heart-flow-up-one-type {
+    0% {
+        opacity: 1;
+        transform: translateY(100dvh) rotate(0deg);
+    }
+
+    100% {
+        opacity: .6;
+        transform: translateY(calc(0dvh - 30px)) rotate(4deg);
+    }
+}
+
+@keyframes heart-flow-up-two-type {
+    0% {
+        opacity: 1;
+        transform: translateY(100dvh) rotate(0deg);
+    }
+
+    100% {
+        opacity: .7;
+        transform: translateY(calc(0dvh - 30px)) rotate(-4deg);
+    }
+}
+
+@keyframes main-content-section-flow-up {
+    0% {
+        opacity: 0;
+        transform: scale(.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
