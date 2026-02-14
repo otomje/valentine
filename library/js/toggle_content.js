@@ -1,23 +1,49 @@
-const sections = document.querySelectorAll('.main-content__content-section');
-const buttons = document.querySelectorAll('button[id^="next-"], button[id^="back-"]');
+document.addEventListener("DOMContentLoaded", function () {
 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        // находим текущую секцию
-        const currentSection = button.closest('.main-content__content-section');
+    const wellcome = document.getElementById("wellcome");
+    const message = document.getElementById("message");
+    const moments = document.getElementById("moments");
+    const finale = document.getElementById("finale");
 
-        // получаем имя секции из id (next-message → message)
-        const targetName = button.id.replace('next-', '').replace('back-', '');
+    const nextMessage = document.getElementById("next-message");
+    const nextMoments = document.getElementById("next-moments");
+    const nextFinale = document.getElementById("next-finale");
 
-        // находим нужную секцию
-        const targetSection = document.querySelector(`.main-content__content-section.${targetName}`);
+    const backWellcome = document.getElementById("back-wellcome");
+    const backMessage = document.getElementById("back-message");
+    const backMoments = document.getElementById("back-moments");
 
-        if (!currentSection || !targetSection) return;
+    function showSection(sectionToShow) {
+        wellcome.style.display = "none";
+        message.style.display = "none";
+        moments.style.display = "none";
+        finale.style.display = "none";
 
-        // скрываем текущую
-        currentSection.classList.add('close-content');
+        sectionToShow.style.display = "flex";
+    }
 
-        // показываем нужную
-        targetSection.classList.remove('close-content');
+    nextMessage.addEventListener("click", function () {
+        showSection(message);
     });
+
+    nextMoments.addEventListener("click", function () {
+        showSection(moments);
+    });
+
+    nextFinale.addEventListener("click", function () {
+        showSection(finale);
+    });
+
+    backWellcome.addEventListener("click", function () {
+        showSection(wellcome);
+    });
+
+    backMessage.addEventListener("click", function () {
+        showSection(message);
+    });
+
+    backMoments.addEventListener("click", function () {
+        showSection(moments);
+    });
+
 });
